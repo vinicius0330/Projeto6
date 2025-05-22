@@ -1,0 +1,133 @@
+/* RESET BÁSICO */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: transparent;
+}
+#container{
+    display: flex;
+    width: 80%;
+    height: 500px;
+    margin: 50px  auto;
+    border: 1px solid #333;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.video-container,
+.login-container{
+    flex:1;
+    padding: 1px;
+    transition: 0.5s ease-in-out;
+    background-image: linear-gradient(aqua, black);
+}
+
+.video-container video{
+    display: block;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    order:1;
+    animation: efeito 1.5s infinite alternate;
+}
+
+#sombra{
+    width: 400px;
+    height: 45px;
+    background: #fff;
+    
+    border-radius: 50%;
+    margin:  0 auto;
+    filter: blur(10px);
+    animation: efeitoVideo 1.8s infinite alternate;
+}
+
+@keyframes efeito{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(15px);
+    }
+}
+@keyframes efeitoVideo{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: scale(0.85,0.85);
+    }
+}
+
+.login-container{
+    background-image: linear-gradient(aqua, black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+#form-login{
+    width: 100%;
+}
+.form-group{
+    margin-bottom: 20px;
+    width: 80%;
+    margin-left: 25%;
+}
+.form-group label{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"]{
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid greenyellow;
+}
+#btnEntrar{
+    padding: 10px 20px;
+    background: rgb(137, 218, 137);
+    color:blue;
+    border-radius: 10px;
+    transition:  all 200ms linear;
+    margin-left: 25%;
+}
+#btnEntrar:hover{
+    background: greenyellow;
+    box-shadow: 5px 5px 5px greenyellow;
+}
+#btnTrocar{
+    padding: 10px 20px;
+    background: #ccc;
+    color:blue;
+    border-radius: 10px;
+    transition:  all 200ms linear;
+}
+#btnTrocar:hover{
+    background: #555;
+    color:#fff;
+    box-shadow: 5px 5px 5px #fff;
+}
+.mensagem.sucesso{
+    background: #fff;
+    color:green;
+    border-radius: 1px solid greenyellow;
+}
+.mensagem.error{
+    background: #fff;
+    color:rgb(128, 0, 30);
+    border-radius: 1px solid greenyellow;
+}

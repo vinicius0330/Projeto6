@@ -11,17 +11,18 @@
     <main id="container">
         <div class="video-container">
             <video autoplay loop muted>
-                <source src="" type="video/mp4">
+                <source src="./src/assets/video.mp4" type="video/mp4">
             </video>
+            <div id="sombra"></div>
         </div>
         <div class="login-container">
             <header><h1>Login</h1></header>
             <form id="form-login">
-                <article id="form-group">
+                <article class="form-group">
                     <label for="usuario">Usuário</label>
                     <input type="text" id="usuario" name="usuario" required>
                 </article>
-                <article id="form-group">
+                <article class="form-group">
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha" required>
                 </article>
